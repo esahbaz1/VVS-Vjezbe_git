@@ -6,12 +6,11 @@ using System.Threading.Tasks;
 
 namespace VVSProjekat
 {
-    
-        public enum Priority
-        {
-            Low,
-            Medium,
-            High
-        }
-
+    public interface IGoalService
+    {
+        void SetMonthlyGoal(int numberOfTasksPerMonth);
+        void TrackProgress();
     }
+
+
+}

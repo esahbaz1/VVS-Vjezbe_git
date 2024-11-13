@@ -11,17 +11,19 @@ namespace VVSProjekat
     public class Reminder
     {
         public Task Task { get; set; }
-        public DateTime ReminderTime => Task.Deadline.AddMinutes(-Task.ReminderMinutes);
+        public DateTime ReminderTime { get; set; }
 
-        public Reminder(Task task)
+        public Reminder(Task task, DateTime reminderTime)
         {
             Task = task;
+            ReminderTime = reminderTime;
         }
 
-        public bool IsDue()
+        public void SetReminder()
         {
-            return !Task.IsCompleted && DateTime.Now >= ReminderTime;
+            Console.WriteLine($"Reminder set for task '{Task.Title}' at {ReminderTime}");
         }
     }
+
 }
 

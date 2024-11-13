@@ -1,0 +1,7 @@
+ooi,zadaca,16. 11. 2024,Medium,False,Work
+pws,projekat,25. 12. 2024,Low,True,Work
+wt,spirala,17. 11. 2024,High,False,Work
+vvs,projekat,15. 11. 2024,Low,True,Posao
+ois,lab,17. 01. 2025,Medium,False,Generalno
+novi,zadatak,22. 12. 2024,Low,False,Posao
+emina,zadaca,22. 12. 2024,Low,False,Posao

@@ -7,32 +7,48 @@
       "RelativeMoniker": "D:0:0:{CE817B6B-68C1-4F55-BD71-2974AFE9F253}|VVSProjekat\\VVSProjekat.csproj|solutionrelative:vvsprojekat\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{CE817B6B-68C1-4F55-BD71-2974AFE9F253}|VVSProjekat\\VVSProjekat.csproj|C:\\Users\\emina\\VVS-Vjezbe\\vvsprojekat\\igoalservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CE817B6B-68C1-4F55-BD71-2974AFE9F253}|VVSProjekat\\VVSProjekat.csproj|solutionrelative:vvsprojekat\\igoalservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CE817B6B-68C1-4F55-BD71-2974AFE9F253}|VVSProjekat\\VVSProjekat.csproj|c:\\users\\emina\\vvs-vjezbe\\vvsprojekat\\goalservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CE817B6B-68C1-4F55-BD71-2974AFE9F253}|VVSProjekat\\VVSProjekat.csproj|solutionrelative:vvsprojekat\\goalservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CE817B6B-68C1-4F55-BD71-2974AFE9F253}|VVSProjekat\\VVSProjekat.csproj|c:\\users\\emina\\vvs-vjezbe\\vvsprojekat\\ireportservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CE817B6B-68C1-4F55-BD71-2974AFE9F253}|VVSProjekat\\VVSProjekat.csproj|solutionrelative:vvsprojekat\\ireportservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CE817B6B-68C1-4F55-BD71-2974AFE9F253}|VVSProjekat\\VVSProjekat.csproj|c:\\users\\emina\\vvs-vjezbe\\vvsprojekat\\reportservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CE817B6B-68C1-4F55-BD71-2974AFE9F253}|VVSProjekat\\VVSProjekat.csproj|solutionrelative:vvsprojekat\\reportservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CE817B6B-68C1-4F55-BD71-2974AFE9F253}|VVSProjekat\\VVSProjekat.csproj|c:\\users\\emina\\vvs-vjezbe\\vvsprojekat\\reminder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CE817B6B-68C1-4F55-BD71-2974AFE9F253}|VVSProjekat\\VVSProjekat.csproj|solutionrelative:vvsprojekat\\reminder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{CE817B6B-68C1-4F55-BD71-2974AFE9F253}|VVSProjekat\\VVSProjekat.csproj|C:\\Users\\emina\\VVS-Vjezbe\\vvsprojekat\\taskservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CE817B6B-68C1-4F55-BD71-2974AFE9F253}|VVSProjekat\\VVSProjekat.csproj|solutionrelative:vvsprojekat\\taskservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CE817B6B-68C1-4F55-BD71-2974AFE9F253}|VVSProjekat\\VVSProjekat.csproj|C:\\Users\\emina\\VVS-Vjezbe\\vvsprojekat\\task.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CE817B6B-68C1-4F55-BD71-2974AFE9F253}|VVSProjekat\\VVSProjekat.csproj|solutionrelative:vvsprojekat\\task.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CE817B6B-68C1-4F55-BD71-2974AFE9F253}|VVSProjekat\\VVSProjekat.csproj|C:\\Users\\emina\\VVS-Vjezbe\\vvsprojekat\\itaskservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{CE817B6B-68C1-4F55-BD71-2974AFE9F253}|VVSProjekat\\VVSProjekat.csproj|c:\\users\\emina\\vvs-vjezbe\\vvsprojekat\\itaskservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CE817B6B-68C1-4F55-BD71-2974AFE9F253}|VVSProjekat\\VVSProjekat.csproj|solutionrelative:vvsprojekat\\itaskservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CE817B6B-68C1-4F55-BD71-2974AFE9F253}|VVSProjekat\\VVSProjekat.csproj|C:\\Users\\emina\\VVS-Vjezbe\\vvsprojekat\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CE817B6B-68C1-4F55-BD71-2974AFE9F253}|VVSProjekat\\VVSProjekat.csproj|solutionrelative:vvsprojekat\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CE817B6B-68C1-4F55-BD71-2974AFE9F253}|VVSProjekat\\VVSProjekat.csproj|C:\\Users\\emina\\VVS-Vjezbe\\vvsprojekat\\priority.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CE817B6B-68C1-4F55-BD71-2974AFE9F253}|VVSProjekat\\VVSProjekat.csproj|solutionrelative:vvsprojekat\\priority.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CE817B6B-68C1-4F55-BD71-2974AFE9F253}|VVSProjekat\\VVSProjekat.csproj|C:\\Users\\emina\\VVS-Vjezbe\\vvsprojekat\\reminder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CE817B6B-68C1-4F55-BD71-2974AFE9F253}|VVSProjekat\\VVSProjekat.csproj|solutionrelative:vvsprojekat\\reminder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CE817B6B-68C1-4F55-BD71-2974AFE9F253}|VVSProjekat\\VVSProjekat.csproj|c:\\users\\emina\\vvs-vjezbe\\vvsprojekat\\reminderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CE817B6B-68C1-4F55-BD71-2974AFE9F253}|VVSProjekat\\VVSProjekat.csproj|solutionrelative:vvsprojekat\\reminderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CE817B6B-68C1-4F55-BD71-2974AFE9F253}|VVSProjekat\\VVSProjekat.csproj|C:\\Users\\emina\\VVS-Vjezbe\\vvsprojekat\\report.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CE817B6B-68C1-4F55-BD71-2974AFE9F253}|VVSProjekat\\VVSProjekat.csproj|solutionrelative:vvsprojekat\\report.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CE817B6B-68C1-4F55-BD71-2974AFE9F253}|VVSProjekat\\VVSProjekat.csproj|c:\\users\\emina\\vvs-vjezbe\\vvsprojekat\\ireminderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CE817B6B-68C1-4F55-BD71-2974AFE9F253}|VVSProjekat\\VVSProjekat.csproj|solutionrelative:vvsprojekat\\ireminderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CE817B6B-68C1-4F55-BD71-2974AFE9F253}|VVSProjekat\\VVSProjekat.csproj|C:\\Users\\emina\\VVS-Vjezbe\\vvsprojekat\\fileservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CE817B6B-68C1-4F55-BD71-2974AFE9F253}|VVSProjekat\\VVSProjekat.csproj|solutionrelative:vvsprojekat\\fileservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,7 +58,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 18,
+          "SelectedChildIndex": 21,
           "Children": [
             {
               "$type": "Bookmark",
@@ -90,87 +106,133 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Reminder.cs",
-              "DocumentMoniker": "C:\\Users\\emina\\VVS-Vjezbe\\VVSProjekat\\Reminder.cs",
-              "RelativeDocumentMoniker": "VVSProjekat\\Reminder.cs",
-              "ToolTip": "C:\\Users\\emina\\VVS-Vjezbe\\VVSProjekat\\Reminder.cs",
-              "RelativeToolTip": "VVSProjekat\\Reminder.cs",
-              "ViewState": "AQIAAAoAAAAAAAAAAAAiwBsAAAAAAAAA",
+              "DocumentIndex": 3,
+              "Title": "IReportService.cs",
+              "DocumentMoniker": "C:\\Users\\emina\\VVS-Vjezbe\\VVSProjekat\\IReportService.cs",
+              "RelativeDocumentMoniker": "VVSProjekat\\IReportService.cs",
+              "ToolTip": "C:\\Users\\emina\\VVS-Vjezbe\\VVSProjekat\\IReportService.cs*",
+              "RelativeToolTip": "VVSProjekat\\IReportService.cs*",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAABFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T22:38:09.181Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Priority.cs",
-              "DocumentMoniker": "C:\\Users\\emina\\VVS-Vjezbe\\VVSProjekat\\Priority.cs",
-              "RelativeDocumentMoniker": "VVSProjekat\\Priority.cs",
-              "ToolTip": "C:\\Users\\emina\\VVS-Vjezbe\\VVSProjekat\\Priority.cs",
-              "RelativeToolTip": "VVSProjekat\\Priority.cs",
-              "ViewState": "AQIAAAcAAAAAAAAAAAAmwBkAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T22:37:52.011Z"
+              "WhenOpened": "2024-11-13T16:51:27.08Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "Report.cs",
-              "DocumentMoniker": "C:\\Users\\emina\\VVS-Vjezbe\\VVSProjekat\\Report.cs",
-              "RelativeDocumentMoniker": "VVSProjekat\\Report.cs",
-              "ToolTip": "C:\\Users\\emina\\VVS-Vjezbe\\VVSProjekat\\Report.cs",
-              "RelativeToolTip": "VVSProjekat\\Report.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAA+wCAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T22:37:30.042Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Category.cs",
-              "DocumentMoniker": "C:\\Users\\emina\\VVS-Vjezbe\\VVSProjekat\\Category.cs",
-              "RelativeDocumentMoniker": "VVSProjekat\\Category.cs",
-              "ToolTip": "C:\\Users\\emina\\VVS-Vjezbe\\VVSProjekat\\Category.cs",
-              "RelativeToolTip": "VVSProjekat\\Category.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAmwBgAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T22:35:50.083Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Task.cs",
-              "DocumentMoniker": "C:\\Users\\emina\\VVS-Vjezbe\\VVSProjekat\\Task.cs",
-              "RelativeDocumentMoniker": "VVSProjekat\\Task.cs",
-              "ToolTip": "C:\\Users\\emina\\VVS-Vjezbe\\VVSProjekat\\Task.cs",
-              "RelativeToolTip": "VVSProjekat\\Task.cs",
-              "ViewState": "AQIAAAcAAAAAAAAAAAA4wBgAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T22:28:11.975Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "TaskService.cs",
-              "DocumentMoniker": "C:\\Users\\emina\\VVS-Vjezbe\\VVSProjekat\\TaskService.cs",
-              "RelativeDocumentMoniker": "VVSProjekat\\TaskService.cs",
-              "ToolTip": "C:\\Users\\emina\\VVS-Vjezbe\\VVSProjekat\\TaskService.cs",
-              "RelativeToolTip": "VVSProjekat\\TaskService.cs",
-              "ViewState": "AQIAABUAAAAAAAAAAAAAwBoAAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T18:38:08.594Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
               "Title": "ITaskService.cs",
               "DocumentMoniker": "C:\\Users\\emina\\VVS-Vjezbe\\VVSProjekat\\ITaskService.cs",
               "RelativeDocumentMoniker": "VVSProjekat\\ITaskService.cs",
               "ToolTip": "C:\\Users\\emina\\VVS-Vjezbe\\VVSProjekat\\ITaskService.cs",
               "RelativeToolTip": "VVSProjekat\\ITaskService.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAA8AAAAsAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T18:37:59.283Z"
+              "WhenOpened": "2024-11-13T16:32:30.604Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Reminder.cs",
+              "DocumentMoniker": "C:\\Users\\emina\\VVS-Vjezbe\\VVSProjekat\\Reminder.cs",
+              "RelativeDocumentMoniker": "VVSProjekat\\Reminder.cs",
+              "ToolTip": "C:\\Users\\emina\\VVS-Vjezbe\\VVSProjekat\\Reminder.cs",
+              "RelativeToolTip": "VVSProjekat\\Reminder.cs",
+              "ViewState": "AQIAAAEAAAAAAAAAAAAiwB0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T16:31:20.231Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "GoalService.cs",
+              "DocumentMoniker": "C:\\Users\\emina\\VVS-Vjezbe\\VVSProjekat\\GoalService.cs",
+              "RelativeDocumentMoniker": "VVSProjekat\\GoalService.cs",
+              "ToolTip": "C:\\Users\\emina\\VVS-Vjezbe\\VVSProjekat\\GoalService.cs*",
+              "RelativeToolTip": "VVSProjekat\\GoalService.cs*",
+              "ViewState": "AQIAACAAAAAAAAAAAAAAACoAAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T15:51:18.782Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "IReminderService.cs",
+              "DocumentMoniker": "C:\\Users\\emina\\VVS-Vjezbe\\VVSProjekat\\IReminderService.cs",
+              "RelativeDocumentMoniker": "VVSProjekat\\IReminderService.cs",
+              "ToolTip": "C:\\Users\\emina\\VVS-Vjezbe\\VVSProjekat\\IReminderService.cs",
+              "RelativeToolTip": "VVSProjekat\\IReminderService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T15:50:20.676Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ReminderService.cs",
+              "DocumentMoniker": "C:\\Users\\emina\\VVS-Vjezbe\\VVSProjekat\\ReminderService.cs",
+              "RelativeDocumentMoniker": "VVSProjekat\\ReminderService.cs",
+              "ToolTip": "C:\\Users\\emina\\VVS-Vjezbe\\VVSProjekat\\ReminderService.cs",
+              "RelativeToolTip": "VVSProjekat\\ReminderService.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAAAEEAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T15:46:25.686Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ReportService.cs",
+              "DocumentMoniker": "C:\\Users\\emina\\VVS-Vjezbe\\VVSProjekat\\ReportService.cs",
+              "RelativeDocumentMoniker": "VVSProjekat\\ReportService.cs",
+              "ToolTip": "C:\\Users\\emina\\VVS-Vjezbe\\VVSProjekat\\ReportService.cs*",
+              "RelativeToolTip": "VVSProjekat\\ReportService.cs*",
+              "ViewState": "AQIAACYAAAAAAAAAAAAAACgAAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T15:46:34.276Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "TaskService.cs",
+              "DocumentMoniker": "C:\\Users\\emina\\VVS-Vjezbe\\VVSProjekat\\TaskService.cs",
+              "RelativeDocumentMoniker": "VVSProjekat\\TaskService.cs",
+              "ToolTip": "C:\\Users\\emina\\VVS-Vjezbe\\VVSProjekat\\TaskService.cs",
+              "RelativeToolTip": "VVSProjekat\\TaskService.cs",
+              "ViewState": "AQIAAGoAAAAAAAAAAAAcwHsAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-12T22:20:16.251Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Priority.cs",
+              "DocumentMoniker": "C:\\Users\\emina\\VVS-Vjezbe\\VVSProjekat\\Priority.cs",
+              "RelativeDocumentMoniker": "VVSProjekat\\Priority.cs",
+              "ToolTip": "C:\\Users\\emina\\VVS-Vjezbe\\VVSProjekat\\Priority.cs",
+              "RelativeToolTip": "VVSProjekat\\Priority.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-12T22:18:40.593Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "IGoalService.cs",
+              "DocumentMoniker": "C:\\Users\\emina\\VVS-Vjezbe\\VVSProjekat\\IGoalService.cs",
+              "RelativeDocumentMoniker": "VVSProjekat\\IGoalService.cs",
+              "ToolTip": "C:\\Users\\emina\\VVS-Vjezbe\\VVSProjekat\\IGoalService.cs*",
+              "RelativeToolTip": "VVSProjekat\\IGoalService.cs*",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAA3AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-12T21:52:25.374Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -178,11 +240,24 @@
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\emina\\VVS-Vjezbe\\VVSProjekat\\Program.cs",
               "RelativeDocumentMoniker": "VVSProjekat\\Program.cs",
-              "ToolTip": "C:\\Users\\emina\\VVS-Vjezbe\\VVSProjekat\\Program.cs",
-              "RelativeToolTip": "VVSProjekat\\Program.cs",
-              "ViewState": "AQIAADIAAAAAAAAAAAAAADkAAAAbAAAA",
+              "ToolTip": "C:\\Users\\emina\\VVS-Vjezbe\\VVSProjekat\\Program.cs*",
+              "RelativeToolTip": "VVSProjekat\\Program.cs*",
+              "ViewState": "AQIAAHgAAAAAAAAAAAAAAH4AAAAvAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T18:36:56.401Z",
+              "WhenOpened": "2024-11-10T14:05:58.866Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "FileService.cs",
+              "DocumentMoniker": "C:\\Users\\emina\\VVS-Vjezbe\\VVSProjekat\\FileService.cs",
+              "RelativeDocumentMoniker": "VVSProjekat\\FileService.cs",
+              "ToolTip": "C:\\Users\\emina\\VVS-Vjezbe\\VVSProjekat\\FileService.cs",
+              "RelativeToolTip": "VVSProjekat\\FileService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAD4AAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-10T14:04:33.938Z",
               "EditorCaption": ""
             }
           ]

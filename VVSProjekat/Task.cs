@@ -1,24 +1,35 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace VVSProjekat
 {
     public class Task
-    {
-        public string Name { get; set; }
-        public DateTime Deadline { get; set; }
-        public int ReminderMinutes { get; set; }
-        public Priority Priority { get; set; }
+    {    
+        public List<Task> SubTasks { get; set; } = new List<Task>();
+        public string Title { get; set; }
+        public string Description { get; set; }
+        public DateTime DueDate { get; set; }
+        public Priority TaskPriority { get; set; }
         public bool IsCompleted { get; set; }
         public Category Category { get; set; }
+        public DateTime? AssignedDate { get; set; }
 
-        public Task(string name, DateTime deadline, int reminderMinutes, Priority priority, Category category)
+        public Task(string title, string description, DateTime dueDate, Priority priority, Category category)
         {
-            Name = name;
-            Deadline = deadline;
-            ReminderMinutes = reminderMinutes;
-            Priority = priority;
-            IsCompleted = false;
+            Title = title;
+            Description = description;
+            DueDate = dueDate;
+            TaskPriority = priority;
             Category = category;
         }
+
+        // Dodavanje podzadataka
+        public void AddSubTask(Task subTask)
+        {
+            SubTasks.Add(subTask);
+        }
+        public DateTime? ReminderTime { get; set; }
     }
+
+    
 }

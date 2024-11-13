@@ -1,173 +1,298 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Timers;
-using VVSProjekat;
-using Task = VVSProjekat.Task;
 
-class Program
+namespace VVSProjekat
 {
-    static void Main(string[] args)
+    class Program
     {
-        ITaskService taskService = new TaskService();
-
-        while (true)
+        static void Main(string[] args)
         {
-            Console.Clear();
-            Console.ForegroundColor = ConsoleColor.Cyan;
-            Console.WriteLine("===== Task Management =====");
-            Console.ResetColor();
+            // Kreiramo servise
+            ITaskService taskService = new TaskService();
+            IGoalService goalService = new GoalService();
+            IReportService reportService = new ReportService();
+            IReminderService reminderService = new ReminderService();
+            ITaskAssignmentService taskAssignmentService = new TaskAssignmentService();
+            IFileService fileService = new FileService();
 
-            Console.WriteLine("Choose an option:");
-            Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine("1. Add Task");
-            Console.WriteLine("2. Display Tasks");
-            Console.WriteLine("3. Set Task Priority");
-            Console.WriteLine("4. Generate Report");
-            Console.WriteLine("5. Check Reminders");
-            Console.WriteLine("6. Mark Task as Completed");
-            Console.WriteLine("7. Exit");
-            Console.ResetColor();
 
-            Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.Write("Enter choice: ");
-            var choice = Console.ReadLine();
-            Console.ResetColor();
+            // Kreiramo osnovnu kategoriju za zadatke
+            Category workCategory = new Category("Work");
 
-            try
+            // Meni za korisnika
+            while (true)
             {
-                Console.Clear(); // Clear the screen before displaying each option window
+                Console.Clear();
+                Console.WriteLine("Izaberite funkcionalnost:");
+                Console.WriteLine("1. Kreiraj zadatak");
+                Console.WriteLine("2. Prikaz zadataka");
+                Console.WriteLine("3. Postavi ciljeve");
+                Console.WriteLine("4. Generiši izvještaj");
+                Console.WriteLine("5. Dodaj podsjetnik");
+                Console.WriteLine("6. Arhiviraj završene zadatke");
+                Console.WriteLine("7. Automatski dodijeli zadatak");
+                Console.WriteLine("8. Oznaci zadatak kao zavrsen");
+                Console.WriteLine("9. Kraj");
+                Console.Write("Odaberite opciju (1-9): ");
 
-                switch (choice)
+                var option = Console.ReadLine();
+
+                switch (option)
                 {
                     case "1":
-                        AddTask(taskService);
+                        // Kreiranje novog zadatka
+                        Console.Write("Unesite naziv zadatka: ");
+                        string title = Console.ReadLine();
+
+                        Console.Write("Unesite opis zadatka: ");
+                        string description = Console.ReadLine();
+
+                        Console.Write("Unesite datum isteka (dd/MM/yyyy): ");
+                        DateTime dueDate = DateTime.ParseExact(Console.ReadLine(), "dd/MM/yyyy", null);
+
+                        Console.WriteLine("Odaberite prioritet (0 - Low, 1 - Medium, 2 - High): ");
+                        Priority priority = (Priority)Enum.Parse(typeof(Priority), Console.ReadLine());
+
+                        // Izbor kategorije
+                        Console.WriteLine("Odaberite kategoriju zadatka:");
+                        Console.WriteLine("0 - Posao");
+                        Console.WriteLine("1 - Personalno");
+                        Console.WriteLine("2 - Generalno");
+                        int categoryChoice = int.Parse(Console.ReadLine());
+
+                        Category selectedCategory;
+                        switch (categoryChoice)
+                        {
+                            case 0:
+                                selectedCategory = new Category("Posao");
+                                break;
+                            case 1:
+                                selectedCategory = new Category("Personalno");
+                                break;
+                            case 2:
+                                selectedCategory = new Category("Generalno");
+                                break;
+                            default:
+                                Console.WriteLine("Nepoznata opcija. Kategorija nije odabrana.");
+                                selectedCategory = new Category("Generalno"); // Default kategorija
+                                break;
+                        }
+
+                        Task newTask = new Task(title, description, dueDate, priority, selectedCategory);
+                        taskService.CreateTask(newTask);
+
+                        // Spremamo zadatak u CSV
+                        fileService.SaveToFile(new List<Task> { newTask }, "csv");
+
+                        Console.WriteLine("Zadatak je kreiran i dodan u fajl bez brisanja postojećih zadataka.");
                         break;
+
+
+
                     case "2":
-                        taskService.DisplayTasks();
+                        // Prikaz zadataka
+                        Console.WriteLine("Lista zadataka:");
+
+                        // Učitavamo zadatke iz CSV fajla
+                        List<Task> loadedTasks = fileService.LoadFromFile("csv");
+
+                        // Ispis učitanih zadataka
+                        if (loadedTasks.Count == 0)
+                        {
+                            Console.WriteLine("Nema zadataka za prikaz.");
+                        }
+                        else
+                        {
+                            foreach (var task in loadedTasks)
+                            {
+                                // Prikaz osnovnih informacija o zadatku
+                                Console.Write($"Zadatak: {task.Title}, Rok: {task.DueDate:dd/MM/yyyy}, Prioritet: {task.TaskPriority}, Kategorija: {task.Category.Name}, Završeno: {task.IsCompleted}");
+
+                                // Provera da li zadatak ima postavljen podsetnik
+                                if (task.ReminderTime.HasValue)
+                                {
+                                    Console.Write($", Podsjetnik: {task.ReminderTime.Value:dd/MM/yyyy HH:mm}");
+                                }
+
+                                Console.WriteLine(); // Novi red nakon prikaza zadatka
+                            }
+                        }
                         break;
+
+
+
                     case "3":
-                        SetTaskPriority(taskService);
+                        Console.Write("Unesite broj zadataka koje treba završiti mjesečno: ");
+                        int monthlyGoal = int.Parse(Console.ReadLine());
+                        goalService.SetMonthlyGoal(monthlyGoal);
+                        goalService.TrackProgress();
                         break;
+
                     case "4":
-                        taskService.GenerateReport();
+                        List<Task> allTasks = fileService.LoadFromFile("csv");
+
+                        // Unos datuma za izvještaj
+                        Console.Write("Unesite početni datum izvještaja (dd/MM/yyyy): ");
+                        DateTime startDate = DateTime.ParseExact(Console.ReadLine(), "dd/MM/yyyy", null);
+
+                        Console.Write("Unesite završni datum izvještaja (dd/MM/yyyy): ");
+                        DateTime endDate = DateTime.ParseExact(Console.ReadLine(), "dd/MM/yyyy", null);
+
+                        // Generisanje izvještaja
+                        var report = reportService.GenerateReport(startDate, endDate, allTasks);
+
+                        // Prikaz grupisanih zadataka po prioritetu i kategoriji
+                        Console.WriteLine("\nIzvještaj o zadacima grupisanim po prioritetima i kategorijama:");
+                        reportService.DisplayTasksGroupedByPriorityAndCategory(report);
                         break;
+
+
+
+
                     case "5":
-                        taskService.CheckReminders();
+                        // Dodavanje podsjetnika
+                        Console.Write("Unesite naziv zadatka za koji želite postaviti podsjetnik: ");
+                        string taskName = Console.ReadLine();
+
+                        // Učitavamo zadatke iz CSV fajla
+                        List<Task> tasks = fileService.LoadFromFile("csv");
+
+                        // Pronalazimo zadatak po nazivu
+                        var taskForReminder = tasks.FirstOrDefault(t => t.Title == taskName);
+                        if (taskForReminder != null)
+                        {
+                            Console.Write("Unesite vrijeme podsjetnika (dd/MM/yyyy HH:mm): ");
+                            DateTime reminderTime = DateTime.ParseExact(Console.ReadLine(), "dd/MM/yyyy HH:mm", null);
+
+                            // Postavljamo podsjetnik za zadatak
+                            taskForReminder.ReminderTime = reminderTime;
+                            reminderService.SetReminder(new Reminder(taskForReminder, reminderTime));
+
+                            // Spremamo ažurirane zadatke nazad u CSV fajl
+                            fileService.SaveToFile(tasks, "csv");
+
+                            Console.WriteLine("Podsjetnik je dodan i zadatak je ažuriran u CSV fajlu.");
+                        }
+                        else
+                        {
+                            Console.WriteLine("Zadatak nije pronađen!");
+                        }
                         break;
-                    case "7":
-                        Console.Clear();
-                        Console.ForegroundColor = ConsoleColor.Green;
-                        Console.WriteLine("Thank you for using our application!");
-                        Console.ResetColor();
-                        return;
+
+
+
+
+
                     case "6":
-                        MarkTaskAsCompleted(taskService);
+                        // Arhiviranje završnih zadataka
+                        taskService.ArchiveCompletedTasks();
                         break;
+
+                    case "7":
+                        // Unos naziva zadatka za automatsku dodelu
+                        Console.Write("Unesite novi naziv zadatka za automatsku dodjelu: ");
+                        string newTaskName = Console.ReadLine();
+
+                        // Unos prioritet i kategorije
+                        Console.WriteLine("Unesite prioritet zadatka (0 - Low, 1 - Medium, 2 - High): ");
+                        if (!Enum.TryParse<Priority>(Console.ReadLine(), out Priority taskPriority))
+                        {
+                            Console.WriteLine("Neispravan unos za prioritet.");
+                            break;
+                        }
+
+                        Console.WriteLine("Unesite kategoriju zadatka (Posao, Personalno, Generalno): ");
+                        string categoryInput = Console.ReadLine().Trim();
+
+                        // Provjera da li je unesena ispravna kategorija
+                        var validCategories = new List<string> { "Posao", "Personalno", "Generalno" };
+                        if (!validCategories.Contains(categoryInput))
+                        {
+                            Console.WriteLine("Neispravan unos za kategoriju.");
+                            break;
+                        }
+
+                        // Učitavanje zadataka koji odgovaraju prioritetu i kategoriji
+                        var tasksForAssignment = taskService.GetTasks()
+                            .Where(t => t.TaskPriority == taskPriority && t.Category.Name.Equals(categoryInput, StringComparison.OrdinalIgnoreCase))
+                            .ToList();
+
+                        if (tasksForAssignment.Count == 0)
+                        {
+                            Console.WriteLine("Nema zadatka koji ispunjava vaše uslove.");
+                            break;
+                        }
+
+                        // Nasumično biranje zadatka iz filtrirane liste
+                        var random = new Random();
+                        var taskForAssignment = tasksForAssignment[random.Next(tasksForAssignment.Count)];
+
+                        // Spremanje novog zadatka sa zadatim nazivom
+                        var newTaska = new Task(
+                            newTaskName,
+                            taskForAssignment.Description,
+                            taskForAssignment.DueDate,
+                            taskForAssignment.TaskPriority,
+                            taskForAssignment.Category
+                        )
+                        {
+                            IsCompleted = taskForAssignment.IsCompleted,
+                            ReminderTime = taskForAssignment.ReminderTime,
+                            AssignedDate = DateTime.Now  // Dodjela trenutnog datuma
+                        };
+
+                        // Dodavanje zadatka u CSV fajl
+                        fileService.SaveToFile(new List<Task> { newTaska }, "csv");
+
+                        Console.WriteLine($"Novi zadatak '{newTaskName}' dodijeljen automatski sa prioritetom {taskPriority} u kategoriji {categoryInput}.");
+                        break;
+
+
+
+
+                    case "8":
+                        Console.Write("Unesite naziv zadatka koji želite označiti kao završen: ");
+                        string taskToComplete = Console.ReadLine();
+
+                        // Učitavamo zadatke iz CSV fajla
+                        List<Task> tasksFromFile = fileService.LoadFromFile("csv");
+
+                        // Pronađi zadatak u listi učitanih zadataka
+                        var taskForCompletion = tasksFromFile.FirstOrDefault(t => t.Title.ToLower().Trim() == taskToComplete.ToLower().Trim());
+                        if (taskForCompletion != null)
+                        {
+                            // Označavamo zadatak kao završen
+                            taskForCompletion.IsCompleted = true;
+
+                            // Ažuriranje svih zadataka u CSV fajlu (zadatak je sada označen kao završen, ali nije obrisan)
+                            fileService.SaveToFile(tasksFromFile, "csv");
+
+                            Console.WriteLine("Zadatak je označen kao završen.");
+                        }
+                        else
+                        {
+                            Console.WriteLine("Zadatak nije pronađen!");
+                        }
+                        break;
+
+
+
+
+                    case "9":
+                        // Izlaz iz programa
+                        Console.WriteLine("Zatvaranje aplikacije...");
+                        return;
+
                     default:
-                        Console.ForegroundColor = ConsoleColor.Red;
-                        Console.WriteLine("Unknown option.");
-                        Console.ResetColor();
+                        Console.WriteLine("Nepoznata opcija. Pokušajte ponovo.");
                         break;
                 }
 
-                Console.ForegroundColor = ConsoleColor.Magenta;
-                Console.WriteLine("\nPress Enter to go back to the main menu...");
-                Console.ResetColor();
-                Console.ReadLine();
-            }
-            catch (Exception ex)
-            {
-                Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine($"Error: {ex.Message}");
-                Console.ResetColor();
+                // Čekanje korisnika da pritisne tipku za nastavak
+                Console.WriteLine("\nPritisnite bilo koju tipku za nastavak...");
+                Console.ReadKey();
             }
         }
     }
 
-    static void AddTask(ITaskService taskService)
-    {
-        Console.Clear();
-        Console.ForegroundColor = ConsoleColor.Cyan;
-        Console.WriteLine("=== Add New Task ===");
-        Console.ResetColor();
-
-        Console.Write("Enter task name: ");
-        string name = Console.ReadLine();
-
-        Console.Write("Enter deadline (yyyy-MM-dd): ");
-        DateTime deadline = DateTime.Parse(Console.ReadLine());
-
-        Console.Write("Enter reminder in minutes: ");
-        int reminder = int.Parse(Console.ReadLine());
-
-        Console.Write("Enter priority (low, medium, high): ");
-        string priorityLevel = Console.ReadLine();
-
-        Console.Write("Enter category: ");
-        string categoryName = Console.ReadLine();
-
-        Console.Write("Is the task completed? (yes/no): ");
-        string completedInput = Console.ReadLine();
-        bool isCompleted = completedInput.Equals("yes", StringComparison.OrdinalIgnoreCase);
-
-        var task = new Task(
-            name,
-            deadline,
-            reminder,
-            new Priority(priorityLevel),
-            new Category(categoryName)
-        )
-        {
-            IsCompleted = isCompleted
-        };
-
-        taskService.AddTask(task);
-        Console.ForegroundColor = ConsoleColor.Green;
-        Console.WriteLine("Task added successfully!");
-        Console.ResetColor();
-    }
-
-    static void MarkTaskAsCompleted(ITaskService taskService)
-    {
-        Console.Clear();
-        Console.ForegroundColor = ConsoleColor.Cyan;
-        Console.WriteLine("=== Mark Task as Completed ===");
-        Console.ResetColor();
-
-        Console.Write("Enter task name to mark as completed: ");
-        string taskName = Console.ReadLine();
-
-        var task = taskService.GetTaskByName(taskName);
-        if (task != null)
-        {
-            task.IsCompleted = true;
-            Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine($"Task '{taskName}' has been marked as completed.");
-        }
-        else
-        {
-            Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine("Task not found.");
-        }
-        Console.ResetColor();
-    }
-
-    static void SetTaskPriority(ITaskService taskService)
-    {
-        Console.Clear();
-        Console.ForegroundColor = ConsoleColor.Cyan;
-        Console.WriteLine("=== Set Task Priority ===");
-        Console.ResetColor();
-
-        Console.Write("Enter task name to change priority: ");
-        string taskName = Console.ReadLine();
-        Console.Write("Enter new priority: ");
-        string newPriority = Console.ReadLine();
-
-        taskService.SetPriority(taskName, newPriority);
-        Console.ForegroundColor = ConsoleColor.Green;
-        Console.WriteLine("Priority updated successfully!");
-        Console.ResetColor();
-    }
 }

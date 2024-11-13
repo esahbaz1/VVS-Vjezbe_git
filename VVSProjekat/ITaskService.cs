@@ -8,12 +8,12 @@ namespace VVSProjekat
 {
     public interface ITaskService
     {
-        void AddTask(Task task);
-        void DisplayTasks();
-        void SetPriority(string taskName, string newPriority);
-        void GenerateReport();
-        void CheckReminders();
-        Task GetTaskByName(string taskName);
-
+        void CreateTask(Task task);
+        void UpdateTask(Task task);
+        List<Task> GetTasks();
+        List<Task> SortTasksByPriority();
+        void ArchiveCompletedTasks();
+        void GenerateStatistics(DateTime startDate, DateTime endDate);
     }
+
 }

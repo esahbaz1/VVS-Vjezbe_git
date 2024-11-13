@@ -9,16 +9,18 @@ namespace VVSProjekat
     public class Category
     {
         public string Name { get; set; }
+        public List<string> Tags { get; set; } = new List<string>();
 
         public Category(string name)
         {
             Name = name;
         }
 
-        public override string ToString()
+        public void AddTag(string tag)
         {
-            return Name;
+            Tags.Add(tag);
         }
     }
+
 }
 
